@@ -6,6 +6,7 @@ um dos primeiros trabalho usando o Javascript, onde se resumiu a um jogo que al�
 1º Mostrar a carta principal.
 
 2 º Mostrar carta1 , carta 2, carta3, carta4, cada uma com radio  para que o usuário possa escolher onde a figura que ele viu e memorizou na carta principal .( ou seja , onde a figura aparece) Coloque uma opção sim e uma não
+
 3º atribuir um contador para uma variável    contador =0
 
 se a carta for igual a 1 , então contador=contador+ 1
