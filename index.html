@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vamos Jogar :)</title>
+</head>
+    <style>
+    body{
+        background-image: url("img/fundo.webp");
+        font: 16px arial, Helvetica, sans-serif;
+        color: rgb(255, 255, 255);
+       
+    }
+
+    #centro{
+        text-align: center;
+        align-items: center;
+    }
+
+    #regras {
+        background-color: #6424dbd8;
+        width: 10 px;
+    }
+
+    img{
+        border-color: rgb(0, 34, 128);
+    }
+    
+    #button {
+  background-color: #ae2ad6; /* Green */
+  border: none;
+  color: rgb(11, 241, 222);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+#button {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+
+</style>
+<body>
+    
+    <div id="centro">
+        <h1 style="color: rgb(255, 94, 0)">
+            JOGO DA ADIVINHAÇÃO
+        </h1>
+
+        <h2>vamos conhecer as regras?</h2>
+            
+            <details>   
+                
+                <summary>regras</summary>
+                    <div id="regras">
+                        <p>        
+                        Você verá um cartão com 15 personagens, em seguida você deverá escolher um deles.<br>
+                        Em seguida verá mais 4 cartões que você deverá falar se o personagem que você escolheu está ou não em cada um dos cartões.<br>
+                        Ao terminar a deusa da sabedoria conseguirá falar qual personagem você escolheu.
+                        será que ela vai acertar? hahahahaha<br>
+                        </p>
+                        </div>
+            </details>
+
+
+            <h1 style="color: rgb(255, 94, 0)">
+                VAMOS COMEÇAR?
+            </h1>
+
+
+            <h2 style="color: rgb(255, 94, 0)">
+            ESCOLHA UM PERSONGEM
+            </h2>
+
+
+            <img src="img/principal.png" border="5" width="740" height="500" title="escolha um e prossiga"> </img>
+
+
+            <h2 style="color: rgb(255, 94, 0)"></h2>
+            ESCOLHEU?... ISSO! AGORA VEJA EM QUAIS CARTÕES TEM SEU PERSONAGEM!
+            </h2>
+
+            <img src="img/carta_1.png" border="5" width="740" height="500" title="seu personagem esá aqui?">
+            <script language="Javascript">
+               
+                document.write('<br>')
+                document.write('<form name="DadosForms" method="get">');
+               // document.write('div="button"');
+                document.write('<INPUT TYPE="radio" NAME="op1" VALUE="Sim">Sim ');
+                document.write('<INPUT TYPE="radio" NAME="op1" VALUE="Não" checked>Não<P>');
+                document.write('<img src="img/carta_2.png" border="5" width="740" height="500" title="seu personagem esá aqui?"> </img>')
+                document.write('<br>')
+                document.write('<INPUT TYPE="radio" NAME="op2" VALUE="Sim">Sim ');
+                document.write('<INPUT TYPE="radio" NAME="op2" VALUE="Não" checked>Não<P>');
+                document.write('<img src="img/carta_3.png" border="5" width="740" height="500" title="seu personagem esá aqui?"> </img>')
+                document.write('<br>')
+                document.write('<INPUT TYPE="radio" NAME="op3" VALUE="Sim">Sim ');
+                document.write('<INPUT TYPE="radio" NAME="op3" VALUE="Não" checked>Não<P>');
+                document.write('<img src="img/carta_4.png" border="5" width="740" height="500" title="seu personagem esá aqui?"> </img>')
+                document.write('<br>')
+                document.write('<INPUT TYPE="radio" NAME="op4" VALUE="Sim">Sim ');
+                document.write('<INPUT TYPE="radio" NAME="op4" VALUE="Não" checked>Não<P>')
+                document.write('<input type="button" name="verifica" value="Ver o Resultado" onclick="respostas()">');
+				document.write('<input type="reset" name="limpar" value="Limpar Respostas" >');
+                document.write('</form>')
+
+             
+
+                function respostas(){ 
+                  
+       var posicao=0;
+	  
+       var resp1=document.DadosForms.op1.value;
+	   var resp2=document.DadosForms.op2.value;
+	   var resp3=document.DadosForms.op3.value;
+	   var resp4=document.DadosForms.op4.value;
+
+		
+		
+		 
+		if(resp1 == "Sim") posicao=posicao+1;
+		if(resp2 == "Sim") posicao=posicao+2; 
+		if(resp3 == "Sim") posicao=posicao+8;
+		if(resp4 == "Sim") posicao=posicao+4;
+                
+		
+		if(posicao>0)
+		{
+	    document.write('<div style="background-color: #250448"');
+        document.write('<div id="fundo">')
+        document.write('<center>');
+		document.write('<h1>O PERSONAGEM QUE VOCÊ ESCOLHEU É: </h1></br>');
+        document.write('<h3>');
+        document.write('<div id="fundo">');
+		if(posicao ==1) document.write('<img src="img/1.jpg" width="300" height="300"></img> </br> VOCÊ ESCOLHEU O GON!');
+		if(posicao ==2) document.write('<img src="img/2.jpg"></img> </br> VOCÊ ESCOLHEU O KILLUA!');
+		if(posicao ==3) document.write('<img src="img/3.jpg" width="320" height="320"></img> </br> VOCÊ ESCOLHEU O KURAPIKA!');
+		if(posicao ==4) document.write('<img src="img/4.jpg"></img> </br> VOCÊ ESCOLHEU O LEORIO!');
+		if(posicao ==5) document.write('<img src="img/5.png" width="355" height="318"></img> </br> VOCÊ ESCOLHEU O KANEKI!');
+		if(posicao ==6) document.write('<img src="img/6.jpg" width="240" height="240"></img> </br> VOCÊ ESCOLHEU A TOUKA!');
+		if(posicao ==7) document.write('<img src="img/7.jpg"></img> </br> VOCÊ ESCOLHEU O YOSHIMURA!');
+		if(posicao ==8) document.write('<img src="img/8.jpg"></img> </br> VOCÊ ESCOLHEU A RIZE!');
+		if(posicao ==9) document.write('<img src="img/9.jpg"></img> </br> VOCÊ ESCOLHEU O LUFFY!');
+		if(posicao ==10) document.write('<img src="img/10.jpg" width="360" height="360"></img> </br> VOCÊ ESCOLHEU O ZORO!');
+		if(posicao ==11) document.write('<img src="img/11.jpg" width="500" height="340"></img> </br> VOCÊ ESCOLHEU A ROBIN!');
+		if(posicao ==12) document.write('<img src="img/12.jpg"></img> </br> VOCÊ ESCOLHEU A NAMI!');
+		if(posicao ==13) document.write('<img src="img/13.jpg" width="233" height="364"></img> </br> VOCÊ ESCOLHEU O BERU!');
+		if(posicao ==14) document.write('<img src="img/14.jpg" width="362" height="330></img> </br> VOCÊ ESCOLHEU O IGRIS!');
+		if(posicao ==15) document.write('<img src="img/15.jpg"></img> </br> VOCÊ ESCOLHEU O SUNG JIN-WOO!');
+        document.write('</h3>')
+		document.write('</br></br>');
+		document.write('<img src="img/athena.png" width="548" height="428" background-color: #250448></img>');
+		document.write('</br></br><a href="" background-color: #250448><h3>vamos jogar denovo!</h3></a>');
+        document.write('</center>')
+        document.write('</div>')
+        document.write('</div>')
+        }else alert('Você não escolheu nenhuma carta');
+                }
+
+        </script>
+    </div>
+     
+</body>
+
+</html>
+
