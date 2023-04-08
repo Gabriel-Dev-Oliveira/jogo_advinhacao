@@ -1,4 +1,4 @@
-# jogo_advinhacao
+# jogo da advinhação
 jogo feito com javascript que advinha que carta escolheu
 ##
 um dos primeiros trabalho usando o Javascript, onde se resumiu a um jogo que além de trabalhar com a própria linguagem se resumia a um exercicio com lógica de programação
